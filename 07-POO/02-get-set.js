@@ -2,7 +2,7 @@ class Pessoa{
     #nome;
 
     constructor(nome){
-        this.nome = nome
+        this.#nome = nome
     }
 
     get nome(){
@@ -13,5 +13,7 @@ class Pessoa{
         if(valor.lenght >= 2) this.#nome = valor;
     }
 }
-const pessoa = new Pessoa("Pedro");
+let pessoa = new Pessoa("Pedro");
+console.log(pessoa.nome);
+pessoa.nome = "Igor";
 console.log(pessoa.nome);
